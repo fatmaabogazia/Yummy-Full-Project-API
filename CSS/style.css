@@ -1,0 +1,86 @@
+/*    */
+
+/* body{
+    background-color: black
+} */
+
+i {
+    cursor: pointer;
+}
+
+.navbar-white i {
+    color: black;
+}
+
+#iconOpenNavbar,
+#iconCloseNavbar {
+    font-size: 28px;
+}
+
+.divLayOut {
+    background-color: #ffffffb0;
+    top: 110%;
+    bottom: -110%;
+    transition: all 700ms;
+}
+
+.divImage:hover .divLayOut {
+    top: 0;
+    bottom: 0;
+}
+
+
+#iconArea,
+.ingredientsContent i {
+    color: #F9F6F6;
+    font-size: 64px;
+    /* text-align: center; */
+}
+
+#nameAreaH,
+.ingredientsContent h3,
+.ingredientsContent p {
+    color: #F9F6F6;
+    /* text-align: center; */
+}
+
+h1 {
+    padding-left: 10px;
+}
+
+input:focus {
+    border: 0;
+}
+
+input+div {
+    background-color: #F8D7DA;
+    color: #842029;
+}
+
+button {
+    background-color: transparent;
+    color: #DC3545;
+    border: 2px solid #DC3545;
+}
+
+button:disabled {
+    color: #942832;
+    border: 2px solid #84242D;
+}
+
+button:hover {
+    background-color: #DC3545;
+    color: white;
+}
+
+button:disabled:hover {
+    color: #942832;
+    background-color: initial;
+}
+
+
+
+.liForRecipes {
+    background-color: #CFF4FC;
+    color: #075362;
+}

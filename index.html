@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Images/logo.png">
+    <title>Yummy</title>
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body class="bg-black m-0 p-0">
+
+    <nav class="navbar p-0 position-fixed top-0 start-0 bottom-0 d-flex flex-column z-3">
+        <div
+            class="container p-4 navbar-black bg-black h-100 w-auto d-flex flex-column align-items-start text-light d-none">
+            <ul class="list-unstyled">
+                <li class="linksNavs pt-2 pb-2 animate__animated animate__fadeInUp" id="searchPart"><a href=""
+                        class="text-decoration-none text-light">Search</a></li>
+                <li class="linksNavs pt-2 pb-2 animate__animated animate__fadeInUp" id="categoriePart"><a href=""
+                        class="text-decoration-none text-light">Categories</a></li>
+                <li class="linksNavs pt-2 pb-2 animate__animated animate__fadeInUp" id="areaPart"><a href=""
+                        class="text-decoration-none text-light">Area</a></li>
+                <li class="linksNavs pt-2 pb-2 animate__animated animate__fadeInUp" id="ingredientsPart"><a href=""
+                        class="text-decoration-none text-light">Ingredients</a></li>
+                <li class="linksNavs pt-2 pb-2 animate__animated animate__fadeInUp" id="contactUsPart"><a href=""
+                        class="text-decoration-none text-light">Contact Us</a></li>
+            </ul>
+            <div class="footerForNavbar">
+                <div class="footerIcons ">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe mb-2"></i>
+                </div>
+                <div class="footerCopyRight">
+                    <p>Copyright Â© 2019 All Rights<br>
+                        Reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pt-4 pb-4 navbar-white bg-light h-100 w-auto d-flex flex-column justify-content-between">
+            <img src="Images/logo.png" alt="Logo" width="50" class="d-inline-block align-text-top">
+
+            <i class="fa-solid fa-bars" id="iconOpenNavbar"></i>
+            <i class="fa-solid fa-xmark d-none" id="iconCloseNavbar"></i>
+
+            <div class="end-nav d-flex flex-column ">
+                <i class="fa-solid fa-globe mb-3"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="conrainer " id="containerSearch">
+        <div class="row g-4 m-2 justify-content-center" id="myRowSearch" >
+            <!-- Search -->
+                <!-- <div class="col-md-9">
+                <div class="divSearch d-flex gap-4 w-100">
+                    <input type="text" placeholder="Search By Name"
+                        class="bg-transparent border-1 border-light rounded p-2 w-100 text-light" id="searchByNameInpu">
+                    <input type="text" placeholder="Search By First Letter"
+                        class="bg-transparent border-1 border-light rounded p-2 w-100 text-light" id="searchByFirstLetterInpu">
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="container" id="bigContainer">
+        <div class="row g-4 m-3" id="myRow">
+
+            <!-- Information Meal -->
+            <!-- <div class="col-md-4">
+                <img src="Images/image test.webp" alt="" class="w-100">
+                <h2 class="text-light">Asado </h2>
+            </div>
+            <div class="col-md-8">
+                <div class="mealInformationInner text-light">
+                    <h2>Instructions</h2>
+                    <p> </p>
+                    <h3>Area : Saudi Arabian </h3>
+                    <h3>Category : Chicken </h3>
+                    <h3>Recipes : </h3>
+                    <ul class="list-unstyled d-flex gap-2 ">
+                        <li class="rounded p-2 ms-2 liForRecipes">nnkjkj</li>
+                    </ul>
+                    <h3 class="mb-4">Tags :</h3>
+                    <div class="divButtonsLinks">
+                        <a href="#" class="bg-success p-2 text-light text-decoration-none rounded">Source</a>
+                        <a href="#" class="bg-danger p-2 text-light text-decoration-none rounded">Youtube</a>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!-- Categorie -->
+            <!-- <div class="col-md-3">
+                <div class="divImage position-relative overflow-hidden rounded" >
+                    <img src="Images/image test.webp" alt="meal" class="w-100 d-inline-block">
+                    <div class="divLayOut position-absolute  start-0 end-0 d-flex align-items-center">
+                        <h1>hello</h1>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Area -->
+            <!-- <div class="col-md-3">
+                <div class="divAreaContent text-center">
+                    <i class="fa-solid fa-house-laptop" id="iconArea"></i>
+                    <h3 id="nameAreaH">Egypt</h3>
+                </div>
+            </div> -->
+
+            <!-- Ingredients -->
+            <!-- <div class="col-md-3">
+                <div class="ingredientsContent text-center">
+                    <i class="fa-solid fa-drumstick-bite"></i>
+                    <h3>hello</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quas!</p>
+                </div>
+            </div> -->
+
+            <!-- Contact Us -->
+            <!-- <div class="vh-100 d-flex flex-column justify-content-center" id="divContactUs">
+        <div class="d-flex justify-content-center align-items-center pb-3 gap-3">
+            <div class="mb-3 overflow-hidden w-25">
+                <input type="text" class="w-100 rounded p-2 test" id="inputNmae" placeholder="Enter Your Name" required>
+                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Special characters and numbers not allowed</div>
+            </div>
+            <div class="mb-3 overflow-hidden w-25">
+                <input type="email" class=" w-100 rounded p-2 test" id="inputEmail" placeholder="Enter Your Email"
+                    required>
+                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Email not valid *exemple@yyy.zzz</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center pb-3 gap-3 ">
+            <div class="mb-3 overflow-hidden w-25">
+                <input type="phone" class="w-100 rounded p-2 test" id="inputPhone" placeholder="Enter Your Phone"
+                    required>
+                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid Phone Number</div>
+            </div>
+            <div class="mb-3 overflow-hidden w-25">
+                <input type="number" class=" w-100 rounded p-2 test" id="inputAge" placeholder="Enter Your Age"
+                    required>
+                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid age</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center pb-3 gap-3 ">
+            <div class="mb-3 overflow-hidden w-25">
+                <input type="password" class="w-100 rounded p-2 test" id="inputPassword"
+                    placeholder="Enter Your Password" required>
+                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid password *Minimum eight characters,
+                    at least one letter and one number:*</div>
+            </div>
+            <div class="mb-3 overflow-hidden w-25">
+                <input type="password" class=" w-100 rounded p-2 test" id="inputRepassword" placeholder="Repassword"
+                    required>
+                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">EEnter valid repassword</div>
+            </div>
+        </div>
+        <div class="btnSubmit text-center bg-secondary">
+            <button class="rounded p-2" id="btnSubmit" >
+                submit
+            </button>
+        </div>
+
+    </div> -->
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- animate__fadeInUpBig -->
+
+
+    <!-- JS FILES -->
+    <script src="JS/index.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
