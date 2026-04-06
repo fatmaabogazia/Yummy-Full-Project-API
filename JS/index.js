@@ -107,37 +107,38 @@ contactUsPart.addEventListener("click", function (e) {
 
     let cartona = `
     <div class="vh-100 d-flex flex-column justify-content-center" id="divContactUs">
-        <div class="d-flex justify-content-center align-items-center pb-3 gap-3">
-            <div class="mb-3 overflow-hidden w-25">
-                <input type="text" class="w-100 rounded p-2 test" id="inputNmae" placeholder="Enter Your Name" required>
-                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Special characters and numbers not allowed</div>
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center pb-3 gap-3">
+            <div class="mb-3 overflow-hidden w-100 w-sm-75 w-md-50">
+                <input type="text" class="w-100 rounded p-2 test " id="inputNmae" placeholder="Enter Your Name" required>
+                <div class="mt-3 pt-3 pb-3 rounded text-center bg-danger d-none">Special characters and numbers not allowed</div>
             </div>
-            <div class="mb-3 overflow-hidden w-25">
-                <input type="email" class=" w-100 rounded p-2 test" id="inputEmail" placeholder="Enter Your Email"
+            <div class="mb-3 overflow-hidden w-100 w-sm-75 w-md-50">
+                <input type="email" class=" w-100 rounded p-2 test bg-light" id="inputEmail" placeholder="Enter Your Email"
                     required>
                 <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Email not valid *exemple@yyy.zzz</div>
             </div>
         </div>
-        <div class="d-flex justify-content-center align-items-center pb-3 gap-3 ">
-            <div class="mb-3 overflow-hidden w-25">
+
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center pb-3 gap-3 ">
+            <div class="mb-3 overflow-hidden w-100 w-sm-75 w-md-50">
                 <input type="phone" class="w-100 rounded p-2 test" id="inputPhone" placeholder="Enter Your Phone"
                     required>
                 <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid Phone Number</div>
             </div>
-            <div class="mb-3 overflow-hidden w-25">
+            <div class="mb-3 overflow-hidden w-100 w-sm-75 w-md-50">
                 <input type="number" class=" w-100 rounded p-2 test" id="inputAge" placeholder="Enter Your Age"
                     required>
                 <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid age</div>
             </div>
         </div>
-        <div class="d-flex justify-content-center align-items-center pb-3 gap-3 ">
-            <div class="mb-3 overflow-hidden w-25">
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center pb-3 gap-3 ">
+            <div class="mb-3 overflow-hidden w-100 w-sm-75 w-md-50">
                 <input type="password" class="w-100 rounded p-2 test" id="inputPassword"
                     placeholder="Enter Your Password" required>
                 <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid password *Minimum eight characters,
                     at least one letter and one number:*</div>
             </div>
-            <div class="mb-3 overflow-hidden w-25">
+            <div class="mb-3 overflow-hidden w-100 w-sm-75 w-md-50">
                 <input type="password" class=" w-100 rounded p-2 test" id="inputRepassword" placeholder="Repassword"
                     required>
                 <div class="mt-3 pt-3 pb-3 rounded text-center d-none">EEnter valid repassword</div>
@@ -178,15 +179,16 @@ contactUsPart.addEventListener("click", function (e) {
 async function mainDataMeal() {
     let mainMeal = await (await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=")).json();
     resMainMeal = mainMeal.meals;
-    console.log(resMainMeal);
+    // console.log(resMainMeal);
     displayMainMeal(resMainMeal);
 }
 
 function displayMainMeal(array) {
     let cartona = "";
+
     for (let i = 0; i < array.length; i++) {
         cartona += `
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="divImage position-relative overflow-hidden rounded mealInformation" id="${i}">
                     <img src="${array[i].strMealThumb}" alt="${array[i].strMeal}" class="w-100 d-inline-block">
                     <div class="divLayOut position-absolute start-0 end-0 d-flex align-items-center">
@@ -197,6 +199,7 @@ function displayMainMeal(array) {
 `
     }
     document.getElementById("myRow").innerHTML = cartona;
+
 
     let mealInformation = document.querySelectorAll(".mealInformation");
     mealInformation.forEach(element => {
@@ -362,12 +365,12 @@ function displayCategorie() {
 
     for (let i = 0; i < resCategorie.length; i++) {
         cartona += `
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="divImage position-relative overflow-hidden rounded classCategorieFilter" id="${resCategorie[i].strCategory}">
                     <img src="${resCategorie[i].strCategoryThumb}" alt="${resCategorie[i].strCategory}" class="w-100 d-inline-block">
                     <div class="divLayOut position-absolute  start-0 end-0 text-center p-3">
-                        <h1>${resCategorie[i].strCategory}</h1>
-                        <p>${resCategorie[i].strCategoryDescription?.slice(0, 109)}</p>
+                        <h1 class="fs-4 pb-0 ">${resCategorie[i].strCategory}</h1>
+                        <p class="pt-0 ">${resCategorie[i].strCategoryDescription?.trim().split(/\s+/).slice(0, 20).join(" ")}</p>
                     </div>
                 </div>
             </div>
@@ -395,7 +398,7 @@ function displayFilterCategorie(catego) {
     let cartona = "";
     for (let i = 0; i < catego.length; i++) {
         cartona += `
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="divImage position-relative overflow-hidden rounded mealInformation" id="${catego[i].idMeal}">
                     <img src="${catego[i].strMealThumb}" alt="${catego[i].strMeal}" class="w-100 d-inline-block">
                     <div class="divLayOut position-absolute start-0 end-0 d-flex align-items-center">
@@ -480,7 +483,7 @@ function displayAreas(resAreasName) {
     let cartona = ""
     for (let i = 0; i < resAreasName.length; i++) {
         cartona += `
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="divAreaContent text-center classAreaFilter" id="${resAreasName[i].strArea}">
                     <i class="fa-solid fa-house-laptop" id="iconArea"></i>
                     <h3 id="nameAreaH">${resAreasName[i].strArea}</h3>
@@ -510,7 +513,7 @@ function displayFilterArea(area) {
     let cartona = "";
     for (let i = 0; i < area.length; i++) {
         cartona += `
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="divImage position-relative overflow-hidden rounded mealInformation" id="${area[i].idMeal}">
                     <img src="${area[i].strMealThumb}" alt="${area[i].strMeal}" class="w-100 d-inline-block">
                     <div class="divLayOut position-absolute start-0 end-0 d-flex align-items-center">
@@ -544,7 +547,7 @@ function displayIngredients(resIngredientsName) {
     let cartona = ""
     for (let i = 0; i < 20; i++) {
         cartona += `
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="ingredientsContent text-center classIngredientsFilter" id="${resIngredientsName[i].strIngredient}">
                     <i class="fa-solid fa-drumstick-bite"></i>
                     <h3>${resIngredientsName[i].strIngredient}</h3>
@@ -575,7 +578,7 @@ function resvarFilterIngredients(area) {
     let cartona = "";
     for (let i = 0; i < area.length; i++) {
         cartona += `
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="divImage position-relative overflow-hidden rounded mealInformation" id="${catego[i].idMeal}">
                     <img src="${area[i].strMealThumb}" alt="${area[i].strMeal}" class="w-100 d-inline-block">
                     <div class="divLayOut position-absolute start-0 end-0 d-flex align-items-center">
@@ -608,14 +611,14 @@ function resvarFilterIngredients(area) {
 //             element.nextElementSibling.classList.add("d-none");
 //                 element.classList.add("true");
 //                 console.log(element);
-                
+
 //         } else {
 //             element.nextElementSibling.classList.remove("d-none");
 //             element.classList.remove("true");
 //         }
 //         return;
 //     }
-    
+
 //     if (element.id !== "inputRepassword") {
 //     if (regex[element.id].test(element.value)) {
 //         element.nextElementSibling.classList.add("d-none");
@@ -649,34 +652,35 @@ function validationFormContact(element) {
             element.classList.add("true");
         } else {
             element.nextElementSibling.classList.remove("d-none");
+            element.nextElementSibling.classList.add("d-block");
             element.classList.remove("true");
         }
-        if (element.value=="") {
+        if (element.value == "") {
             element.nextElementSibling.classList.add("d-none");
         }
         toggleButton();
         return;
     }
 
-        if (regex[element.id].test(element.value)) {
-            element.nextElementSibling.classList.add("d-none");
-            element.classList.add("true");
-        } else {
-            element.nextElementSibling.classList.remove("d-none");
-            element.classList.remove("true");
-        }
+    if (regex[element.id].test(element.value)) {
+        element.nextElementSibling.classList.add("d-none");
+        element.classList.add("true");
+    } else {
+        element.nextElementSibling.classList.remove("d-none");
+        element.classList.remove("true");
+    }
 
-        if (element.value === "") {
-            element.nextElementSibling.classList.add("d-none");
-            element.classList.remove("true");
-        }
+    if (element.value === "") {
+        element.nextElementSibling.classList.add("d-none");
+        element.classList.remove("true");
+    }
 
     toggleButton();
 }
 
 
 function toggleButton() {
-    
+
     let btnSubmit = document.querySelector("#btnSubmit");
     let inputNmae = document.querySelector("#inputNmae");
     let inputEmail = document.querySelector("#inputEmail");
@@ -684,13 +688,13 @@ function toggleButton() {
     let inputAge = document.querySelector("#inputAge");
     let inputPassword = document.querySelector("#inputPassword");
     let inputRepassword = document.querySelector("#inputRepassword");
-    
-            if (inputNmae.classList.contains("true")&&inputEmail.classList.contains("true")&&inputPhone.classList.contains("true")&&inputAge.classList.contains("true")&&inputPassword.classList.contains("true")&&inputRepassword.classList.contains("true")) {
-        btnSubmit.disabled=false;
-    }else{
-                btnSubmit.disabled=true;
+
+    if (inputNmae.classList.contains("true") && inputEmail.classList.contains("true") && inputPhone.classList.contains("true") && inputAge.classList.contains("true") && inputPassword.classList.contains("true") && inputRepassword.classList.contains("true")) {
+        btnSubmit.disabled = false;
+    } else {
+        btnSubmit.disabled = true;
     }
-    
+
 }
 
 

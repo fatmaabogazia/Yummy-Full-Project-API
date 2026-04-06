@@ -20,7 +20,7 @@
 
     <nav class="navbar p-0 position-fixed top-0 start-0 bottom-0 d-flex flex-column z-3">
         <div
-            class="container p-4 navbar-black bg-black h-100 w-auto d-flex flex-column align-items-start text-light d-none">
+            class="container py-4 px-md-2 px-lg-4 navbar-black bg-black h-100  d-flex flex-column align-items-start text-light d-none">
             <ul class="list-unstyled">
                 <li class="linksNavs pt-2 pb-2 animate__animated animate__fadeInUp" id="searchPart"><a href=""
                         class="text-decoration-none text-light">Search</a></li>
@@ -61,9 +61,9 @@
     </nav>
 
     <div class="conrainer " id="containerSearch">
-        <div class="row g-4 m-2 justify-content-center" id="myRowSearch" >
+        <div class="row g-4 m-2 justify-content-center" id="myRowSearch">
             <!-- Search -->
-                <!-- <div class="col-md-9">
+            <!-- <div class="col-md-9">
                 <div class="divSearch d-flex gap-4 w-100">
                     <input type="text" placeholder="Search By Name"
                         class="bg-transparent border-1 border-light rounded p-2 w-100 text-light" id="searchByNameInpu">
@@ -74,9 +74,12 @@
         </div>
     </div>
 
-    <div class="container" id="bigContainer">
-        <div class="row g-4 m-3" id="myRow">
-
+    <div class="w-100 container-md" id="bigContainer">
+        <div class="row g-4 m-1 m-md-2 m-lg-3" id="myRow">
+            
+            <div class="vh-100 d-flex justify-content-center align-items-center">
+                <span class="loader"></span>
+            </div>
             <!-- Information Meal -->
             <!-- <div class="col-md-4">
                 <img src="Images/image test.webp" alt="" class="w-100">
@@ -111,6 +114,7 @@
                 </div>
             </div> -->
 
+
             <!-- Area -->
             <!-- <div class="col-md-3">
                 <div class="divAreaContent text-center">
@@ -118,6 +122,7 @@
                     <h3 id="nameAreaH">Egypt</h3>
                 </div>
             </div> -->
+
 
             <!-- Ingredients -->
             <!-- <div class="col-md-3">
@@ -128,61 +133,60 @@
                 </div>
             </div> -->
 
+
             <!-- Contact Us -->
             <!-- <div class="vh-100 d-flex flex-column justify-content-center" id="divContactUs">
-        <div class="d-flex justify-content-center align-items-center pb-3 gap-3">
-            <div class="mb-3 overflow-hidden w-25">
-                <input type="text" class="w-100 rounded p-2 test" id="inputNmae" placeholder="Enter Your Name" required>
-                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Special characters and numbers not allowed</div>
-            </div>
-            <div class="mb-3 overflow-hidden w-25">
-                <input type="email" class=" w-100 rounded p-2 test" id="inputEmail" placeholder="Enter Your Email"
-                    required>
-                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Email not valid *exemple@yyy.zzz</div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center align-items-center pb-3 gap-3 ">
-            <div class="mb-3 overflow-hidden w-25">
-                <input type="phone" class="w-100 rounded p-2 test" id="inputPhone" placeholder="Enter Your Phone"
-                    required>
-                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid Phone Number</div>
-            </div>
-            <div class="mb-3 overflow-hidden w-25">
-                <input type="number" class=" w-100 rounded p-2 test" id="inputAge" placeholder="Enter Your Age"
-                    required>
-                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid age</div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center align-items-center pb-3 gap-3 ">
-            <div class="mb-3 overflow-hidden w-25">
-                <input type="password" class="w-100 rounded p-2 test" id="inputPassword"
-                    placeholder="Enter Your Password" required>
-                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid password *Minimum eight characters,
-                    at least one letter and one number:*</div>
-            </div>
-            <div class="mb-3 overflow-hidden w-25">
-                <input type="password" class=" w-100 rounded p-2 test" id="inputRepassword" placeholder="Repassword"
-                    required>
-                <div class="mt-3 pt-3 pb-3 rounded text-center d-none">EEnter valid repassword</div>
-            </div>
-        </div>
-        <div class="btnSubmit text-center bg-secondary">
-            <button class="rounded p-2" id="btnSubmit" >
-                submit
-            </button>
-        </div>
+                <div class="d-flex justify-content-center align-items-center pb-3 gap-3 ">
+                    <div class="mb-3 overflow-hidden w-25">
+                        <input type="text" class="w-100 rounded p-2 test " id="inputNmae" placeholder="Enter Your Name"
+                            required>
+                        <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Special characters and numbers not
+                            allowed</div>
+                    </div>
+                    <div class="mb-3 overflow-hidden w-25">
+                        <input type="email" class=" w-100 rounded p-2 test" id="inputEmail"
+                            placeholder="Enter Your Email" required>
+                        <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Email not valid *exemple@yyy.zzz</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center pb-3 gap-3 ">
+                    <div class="mb-3 overflow-hidden w-25">
+                        <input type="phone" class="w-100 rounded p-2 test" id="inputPhone"
+                            placeholder="Enter Your Phone" required>
+                        <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid Phone Number</div>
+                    </div>
+                    <div class="mb-3 overflow-hidden w-25">
+                        <input type="number" class=" w-100 rounded p-2 test" id="inputAge" placeholder="Enter Your Age"
+                            required>
+                        <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid age</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center pb-3 gap-3 ">
+                    <div class="mb-3 overflow-hidden w-25">
+                        <input type="password" class="w-100 rounded p-2 test" id="inputPassword"
+                            placeholder="Enter Your Password" required>
+                        <div class="mt-3 pt-3 pb-3 rounded text-center d-none">Enter valid password *Minimum eight
+                            characters,
+                            at least one letter and one number:*</div>
+                    </div>
+                    <div class="mb-3 overflow-hidden w-25">
+                        <input type="password" class=" w-100 rounded p-2 test" id="inputRepassword"
+                            placeholder="Repassword" required>
+                        <div class="mt-3 pt-3 pb-3 rounded text-center d-none">EEnter valid repassword</div>
+                    </div>
+                </div>
+                <div class="btnSubmit text-center ">
+                    <button class="rounded p-2" id="btnSubmit">
+                        submit
+                    </button>
+                </div>
 
-    </div> -->
+            </div> -->
 
 
         </div>
 
     </div>
-
-
-
-
-
 
 
 
